@@ -1,15 +1,13 @@
 <?php
 class Consulta extends Controller
 {
-    function __construct()
-    {
+    function __construct()    {
         parent::__construct();
         $this->view->alumnos = [];
         
     }
 
-    function render()
-    {
+    function render()    {
         $alumnos = $this->model->get();
         $this->view->alumnos = $alumnos;
         $this->view->render("consulta/index");
@@ -42,7 +40,7 @@ class Consulta extends Controller
         }else{
             $this->view->mensaje = "No se pudo actualizar el alumno!!!";
         }
-        $this->view->render('consulta/detalle');
+        //$this->view->render('consulta/detalle');
     }
   
     function eliminarAlumno($param = null){

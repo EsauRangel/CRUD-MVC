@@ -11,9 +11,10 @@
 
 <body>
     <?php require "view/header.php" ?>
+
     <div class="center">
         <h1>Seccion de Consulta</h1>
-        <table width="50%" border="1px solid black">
+        <table id="table" width="50%" border="1px solid black">
             <thead>
                 <tr>
                     <th>Matricula</th>
@@ -44,8 +45,10 @@
 
 
     </div>
+
     <?php require "view/footer.php"; ?>
 
     <script type="text/javascript" src="<?php echo constant('URL');?>public/js/main.js"></script>
+    <script type="text/javascript" src="<?php echo constant('URL');?>public/js/tabla.js"></script>
 </body>
 </html>

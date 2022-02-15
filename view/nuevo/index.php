@@ -10,24 +10,26 @@
     <?php  require "view/header.php" ?>
     <div class="center"><h1>Seccion de nuevo</h1>
     <div class="center"><?php echo $this->mensaje; ?></div>
-        <form action="<?php echo constant('URL')?>nuevo/registrarAlumno" method="POST">
+        <form id="miForm"     method="POST">
             <p>
                 <label for="matricula">Matricula</label><br>
-                <input type="text" name="matricula" required><br>
+                <input type="text" name="matricula" id="matricula" required><br>
             </p>
             <p>
                 <label for="nombre">Nombre</label><br>
-                <input type="text" name="nombre" required><br>
+                <input type="text" name="nombre" id="nombre" required><br>
             </p>
             <p>
                 <label for="apellido">Apellido</label><br>
-                <input type="text" name="apellido" required><br>
+                <input type="text" name="apellido" id="apellido" required><br>
             </p>
-            <p>
-                <input type="submit" value="Registrar">
-            </p>
+            
         </form>
+        <p>
+                <button id="bRegistrar">Registar</button>
+            </p>
     </div>
     <?php require "view/footer.php"; ?>
+    <script src="<?php echo constant('URL');?>public/js/insert.js"></script>
 </body>
 </html>

@@ -4,7 +4,8 @@ botones.forEach(boton => {
     boton.addEventListener('click', function(){
         const matricula = this.dataset.matricula;
 
-        const conform = window.confirm("Deseas eliminar al alumno "+ matricula + "?");
+        const confirm = window.confirm("Deseas eliminar al alumno "+ matricula + "?");
+
         if(confirm){
             httprequest("http://localhost/poo/mvc04/consulta/eliminarAlumno/"+matricula, function(){
                 const tbody = document.querySelector("#tbody-alumnos");
